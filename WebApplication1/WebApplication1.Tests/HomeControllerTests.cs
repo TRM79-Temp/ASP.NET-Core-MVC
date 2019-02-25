@@ -9,7 +9,7 @@ namespace WebApplication1.Tests
 {
     public class HomeControllerTests
     {
-        class ModelCompleteFakeRepository : IRepository
+        class ModelCompleteFakeRepository : IProductRepository
         {
             public IEnumerable<Product> Products { get; } = new Product[]
             {
@@ -43,7 +43,7 @@ namespace WebApplication1.Tests
                     p1.Price == p2.Price));
         }
 
-        class ModelCompleteFakeRepositoryPricesUnder50 : IRepository
+        class ModelCompleteFakeRepositoryPricesUnder50 : IProductRepository
         {
             public IEnumerable<Product> Products { get; } = new Product[]
             {
@@ -75,7 +75,7 @@ namespace WebApplication1.Tests
 
         //
 
-        class ModelCompleteFakeRepository2 : IRepository
+        class ModelCompleteFakeRepository2 : IProductRepository
         {
             public IEnumerable<Product> Products { get; set; }
             public void AddProduct (Product p)
@@ -105,7 +105,7 @@ namespace WebApplication1.Tests
 
         //
 
-        class PropertyOnceFakeRepository : IRepository
+        class PropertyOnceFakeRepository : IProductRepository
         {
             public int PropertyCounter { get; set; } = 0;
             public IEnumerable<Product> Products
@@ -141,7 +141,7 @@ namespace WebApplication1.Tests
         public void IndexActionModelIsCompleteMoq (Product[] products)
         {
             // Arrange
-            var mock = new Mock<IRepository> ();
+            var mock = new Mock<IProductRepository> ();
             mock.SetupGet (m => m.Products).Returns (products);
             var controller = new HomeController { Repository = mock.Object };
             // Act
@@ -157,7 +157,7 @@ namespace WebApplication1.Tests
         public void RepositoryPropertyCalledOnceMoq ()
         {
             // Arrange
-            var mock = new Mock<IRepository> ();
+            var mock = new Mock<IProductRepository> ();
             mock.SetupGet (m => m.Products)
                 .Returns (new [] { new Product { Name = "P1", Price = 100 } });
             var controller = new HomeController { Repository = mock.Object };

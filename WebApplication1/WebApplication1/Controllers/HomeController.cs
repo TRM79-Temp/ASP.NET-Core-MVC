@@ -6,7 +6,7 @@ namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
-        public IRepository Repository { get; set; } = SimpleRepository.SharedRepository;
+        public IProductRepository Repository { get; set; } = SimpleRepository.SharedRepository;
 
         public IActionResult Index () => View (Repository.Products);
 

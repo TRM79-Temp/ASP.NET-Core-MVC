@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace WebApplication1.Models
 {
-    public interface IRepository
+    public interface IProductRepository
     {
         IEnumerable<Product> Products { get; }
         void AddProduct (Product p);

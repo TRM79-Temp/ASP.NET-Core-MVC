@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace WebApplication1.Models
 {
-    public class SimpleRepository : IRepository
+    public class SimpleRepository : IProductRepository
     {
         private static SimpleRepository sharedRepository = new SimpleRepository ();
         private Dictionary<string, Product> products = new Dictionary<string, Product> ();
