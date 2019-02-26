@@ -1,6 +1,7 @@
-using Microsoft.AspNetCore.Mvc;
-using WebApplication1.Models;
 using System.Linq;
+using Microsoft.AspNetCore.Mvc;
+using WebApplication1.Models.ViewModels;
+using WebApplication1.Models;
 
 namespace WebApplication1.Controllers
 {
@@ -14,10 +15,15 @@ namespace WebApplication1.Controllers
             repository = repo;
         }
 
-        public ViewResult List(int productPage = 1)
-            => View(repository.Products
+        public ViewResult List(int productPage = 1) => View(new ProductsListViewModel {
+            Products = repository.Products
                 .OrderBy(p => p.ProductID)
                 .Skip((productPage - 1) * PageSize)
-                .Take(PageSize));
+                .Take(PageSize),
+            PagingInfo = new PagingInfo {
+                CurrentPage = productPage,
+                ItemsPerPage = PageSize,
+                TotalItems = repository.Products.Count()}
+        });
     }
 }
