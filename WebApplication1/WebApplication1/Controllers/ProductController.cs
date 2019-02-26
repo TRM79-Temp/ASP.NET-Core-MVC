@@ -5,10 +5,13 @@ namespace WebApplication1.Controllers
 {
     public class ProductController : Controller
     {
-        private IProductRepository repository;
-        public ProductController(IProductRepository repo)
+        private IProductRepositoryQ repository;
+
+        public ProductController(IProductRepositoryQ repo)
         {
             repository = repo;
         }
+
+        public ViewResult List() => View(repository.Products);
     }
 }
