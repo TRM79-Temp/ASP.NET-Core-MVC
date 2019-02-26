@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 namespace WebApplication1.Models
 {
-    public class FakeProductRepository : IProductRepositoryQ
+    public class FakeProductRepository : IProductRepository
     {
         public IQueryable<Product> Products => new List<Product>
         {

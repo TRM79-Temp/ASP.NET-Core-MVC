@@ -1,7 +1,7 @@
 using System.Linq;
 namespace WebApplication1.Models
 {
-    public interface IProductRepositoryQ
+    public interface IProductRepository
     {
         IQueryable<Product> Products { get; }
     }

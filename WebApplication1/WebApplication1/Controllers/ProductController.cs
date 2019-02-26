@@ -5,9 +5,9 @@ namespace WebApplication1.Controllers
 {
     public class ProductController : Controller
     {
-        private IProductRepositoryQ repository;
+        private IProductRepository repository;
 
-        public ProductController(IProductRepositoryQ repo)
+        public ProductController(IProductRepository repo)
         {
             repository = repo;
         }

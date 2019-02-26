@@ -23,10 +23,10 @@ namespace WebApplication1
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            // services.AddDbContext<ApplicationDbContext>(options =>
-            //     options.UseSqlServer(
-            //         Configuration["Data:SportStoreProducts:ConnectionString"]));
-            services.AddTransient<IProductRepositoryQ, FakeProductRepository>();
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlite(
+                    Configuration["Data:SportStoreProducts:ConnectionString"]));
+            services.AddTransient<IProductRepository, EFProductRepository>();
             //services.AddTransient<IProductRepository, EFProductRepository>();
             services.AddMvc();
         }
@@ -52,6 +52,7 @@ namespace WebApplication1
                     name: "default",
                     template: "{controller=Product}/{action=List}/{id?}");
             });
+            SeedData.EnsurePopulated(app);
         }
     }
 }
