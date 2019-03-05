@@ -6,6 +6,7 @@ namespace WebApplication1.Models
     public class EFProductRepository : IProductRepository
     {
         private ApplicationDbContext context;
+
         public EFProductRepository(ApplicationDbContext ctx)
         {
             context = ctx;
