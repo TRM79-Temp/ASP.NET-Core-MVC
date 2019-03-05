@@ -14,10 +14,9 @@ namespace WebApplication1.Models
                 .FirstOrDefault();
             if (line == null)
             {
-                lineCollection.Add(new CartLine
-                {
+                lineCollection.Add(new CartLine {
                     Product = product,
-                        Quantity = quantity
+                    Quantity = quantity
                 });
             }
             else

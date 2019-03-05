@@ -28,6 +28,8 @@ namespace WebApplication1
                     Configuration["Data:SportStoreProducts:ConnectionString"]));
             services.AddTransient<IProductRepository, EFProductRepository>();
             //services.AddTransient<IProductRepository, EFProductRepository>();
+            services.AddScoped<Cart>(sp => SessionCart.GetCart(sp));
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddMvc();
             services.AddMemoryCache();
             services.AddSession();
@@ -49,6 +51,7 @@ namespace WebApplication1
             // {
             //     await context.Response.WriteAsync("Hello World!");
             // });
+            HttpContextAccessor q = null;
 
             app.UseStatusCodePages();
             app.UseStaticFiles();
