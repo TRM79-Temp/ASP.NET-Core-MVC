@@ -8,12 +8,15 @@ namespace WebApplication1.Controllers
     {
         private IOrderRepository repository;
         private Cart cart;
+
         public OrderController(IOrderRepository repoService, Cart cartService)
         {
             repository = repoService;
             cart = cartService;
         }
+
         public ViewResult Checkout() => View(new Order());
+
         [HttpPost]
         public IActionResult Checkout(Order order)
         {
@@ -32,6 +35,7 @@ namespace WebApplication1.Controllers
                 return View(order);
             }
         }
+
         public ViewResult Completed()
         {
             cart.Clear();
