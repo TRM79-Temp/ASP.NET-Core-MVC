@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/WebApplication1/WebApplication1/bin/Debug/netcoreapp2.1/WebApplication1.dll",
+            "program": "${workspaceFolder}/SportsStore/SportsStore/bin/Debug/netcoreapp2.1/SportsStore.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/WebApplication1/WebApplication1",
+            "cwd": "${workspaceFolder}/SportsStore/SportsStore",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
             "launchBrowser": {

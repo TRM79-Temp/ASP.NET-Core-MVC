@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using WebApplication1.Models;
+using SportsStore.Models;
 
-namespace WebApplication1.Models.ViewModels
+namespace SportsStore.Models.ViewModels
 {
     public class ProductsListViewModel
     {

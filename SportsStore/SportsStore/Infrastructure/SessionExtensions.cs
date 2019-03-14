@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebApplication1.Infrastructure
+namespace SportsStore.Infrastructure
 {
     public static class SessionExtensions
     {

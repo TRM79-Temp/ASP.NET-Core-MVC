@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewComponents;
 using Microsoft.AspNetCore.Routing;
 using Moq;
-using WebApplication1.Components;
-using WebApplication1.Models;
+using SportsStore.Components;
+using SportsStore.Models;
 using Xunit;
-namespace WebApplication1.Tests
+namespace SportsStore.Tests
 {
     public class NavigationMenuViewComponentTests
     {

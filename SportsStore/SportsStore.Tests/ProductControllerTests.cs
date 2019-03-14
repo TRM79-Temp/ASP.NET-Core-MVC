@@ -6,13 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using Moq;
-using WebApplication1.Controllers;
-using WebApplication1.Infrastructure;
-using WebApplication1.Models;
-using WebApplication1.Models.ViewModels;
+using SportsStore.Controllers;
+using SportsStore.Infrastructure;
+using SportsStore.Models;
+using SportsStore.Models.ViewModels;
 using Xunit;
 
-namespace WebApplication1.Tests
+namespace SportsStore.Tests
 {
     public class ProductControllerTests
     {

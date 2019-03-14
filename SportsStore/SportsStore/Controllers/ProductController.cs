@@ -1,9 +1,9 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using WebApplication1.Models.ViewModels;
-using WebApplication1.Models;
+using SportsStore.Models.ViewModels;
+using SportsStore.Models;
 
-namespace WebApplication1.Controllers
+namespace SportsStore.Controllers
 {
     public class ProductController : Controller
     {

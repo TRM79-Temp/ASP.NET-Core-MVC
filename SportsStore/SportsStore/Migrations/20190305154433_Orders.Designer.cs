@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using WebApplication1.Models;
+using SportsStore.Models;
 
-namespace WebApplication1.Migrations
+namespace SportsStore.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20190305154433_Orders")]
@@ -18,7 +18,7 @@ namespace WebApplication1.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "2.1.4-rtm-31024");
 
-            modelBuilder.Entity("WebApplication1.Models.CartLine", b =>
+            modelBuilder.Entity("SportsStore.Models.CartLine", b =>
                 {
                     b.Property<int>("CartLineID")
                         .ValueGeneratedOnAdd();
@@ -38,7 +38,7 @@ namespace WebApplication1.Migrations
                     b.ToTable("CartLine");
                 });
 
-            modelBuilder.Entity("WebApplication1.Models.Order", b =>
+            modelBuilder.Entity("SportsStore.Models.Order", b =>
                 {
                     b.Property<int>("OrderID")
                         .ValueGeneratedOnAdd();
@@ -71,7 +71,7 @@ namespace WebApplication1.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("WebApplication1.Models.Product", b =>
+            modelBuilder.Entity("SportsStore.Models.Product", b =>
                 {
                     b.Property<int>("ProductID")
                         .ValueGeneratedOnAdd();
@@ -89,13 +89,13 @@ namespace WebApplication1.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("WebApplication1.Models.CartLine", b =>
+            modelBuilder.Entity("SportsStore.Models.CartLine", b =>
                 {
-                    b.HasOne("WebApplication1.Models.Order")
+                    b.HasOne("SportsStore.Models.Order")
                         .WithMany("Lines")
                         .HasForeignKey("OrderID");
 
-                    b.HasOne("WebApplication1.Models.Product", "Product")
+                    b.HasOne("SportsStore.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductID");
                 });

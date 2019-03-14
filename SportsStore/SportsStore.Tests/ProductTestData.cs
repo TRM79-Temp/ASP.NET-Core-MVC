@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using WebApplication1.Models;
+using SportsStore.Models;
 
-namespace WebApplication1.Tests
+namespace SportsStore.Tests
 {
     public class ProductTestData : IEnumerable<object[]>
     {

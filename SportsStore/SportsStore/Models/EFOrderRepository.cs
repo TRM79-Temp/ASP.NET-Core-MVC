@@ -1,7 +1,7 @@
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
-namespace WebApplication1.Models
+namespace SportsStore.Models
 {
     public class EFOrderRepository : IOrderRepository
     {

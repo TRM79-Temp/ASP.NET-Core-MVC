@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace WebApplication1.Tests
+namespace SportsStore.Tests
 {
     public class Comparer
     {

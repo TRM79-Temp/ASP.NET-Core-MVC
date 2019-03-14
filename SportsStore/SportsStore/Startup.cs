@@ -8,9 +8,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using WebApplication1.Models;
+using SportsStore.Models;
 
-namespace WebApplication1
+namespace SportsStore
 {
     public class Startup
     {

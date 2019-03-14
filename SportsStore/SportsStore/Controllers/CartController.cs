@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using WebApplication1.Infrastructure;
-using WebApplication1.Models;
-using WebApplication1.Models.ViewModels;
+using SportsStore.Infrastructure;
+using SportsStore.Models;
+using SportsStore.Models.ViewModels;
 
-namespace WebApplication1.Controllers
+namespace SportsStore.Controllers
 {
     public class CartController : Controller
     {

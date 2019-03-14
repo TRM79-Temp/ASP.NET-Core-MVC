@@ -1,8 +1,8 @@
 using System;
 using Xunit;
-using WebApplication1.Models;
+using SportsStore.Models;
 
-namespace WebApplication1.Tests
+namespace SportsStore.Tests
 {
     public class ProductTests
     {

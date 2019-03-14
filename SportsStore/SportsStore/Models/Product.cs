@@ -1,4 +1,4 @@
-namespace WebApplication1.Models
+namespace SportsStore.Models
 {
     public class Product
     {

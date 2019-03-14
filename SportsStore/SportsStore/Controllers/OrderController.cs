@@ -1,8 +1,8 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using WebApplication1.Models;
+using SportsStore.Models;
 
-namespace WebApplication1.Controllers
+namespace SportsStore.Controllers
 {
     public class OrderController : Controller
     {

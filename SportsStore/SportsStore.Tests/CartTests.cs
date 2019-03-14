@@ -1,7 +1,7 @@
 using System.Linq;
-using WebApplication1.Models;
+using SportsStore.Models;
 using Xunit;
-namespace WebApplication1.Tests
+namespace SportsStore.Tests
 {
     public class CartTests
     {
